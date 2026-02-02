@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,38 +8,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Header / Navbar -->
     <header>
         <nav>
-            <div class="logo">MyPortfolia</div>
+            <div class="logo reveal">MyPortfolia</div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="hero-content reveal">
             <h1>Hi, I'm Sujal</h1>
             <p>AI Developer | Python, FastAPI, MongoDB, VectorDb, Numpy, Ai-Agents</p>
             
-            <!-- Links as boxes -->
-            <div class="link-boxes">
+            <div class="link-boxes reveal">
                 <a href="https://github.com/Sujal-369-py" target="_blank" class="box">GitHub</a>
                 <a href="https://leetcode.com/u/Sujal_369_/" target="_blank" class="box">LeetCode</a>
                 <a href="https://www.linkedin.com/in/sujal-3a3562302/" target="_blank" class="box">LinkedIn</a>
-               <a href="mailto:thakursujal0001@gmail.com" class="box">Gmail</a>
+                <a href="mailto:thakursujal0001@gmail.com" class="box">Gmail</a>
                 <a href="https://movie-recommendation-system-using-llm.onrender.com/" target="_blank" class="box">LLM-powered Movie search engine</a>
                 <a href="https://auto-email-9.streamlit.app/" target="_blank" class="box">Automated Email Engine</a>
                 <a href="https://voice-ai-9.streamlit.app/" target="_blank" class="box">VOICE-AI</a>
                 <a href="https://chatroom-wvpv.onrender.com/" target="_blank" class="box">ChatRoom</a>
-
-
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="reveal">
         <p>&copy; 2025 Sujal. All rights reserved.</p>
     </footer>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < window.innerHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
 </body>
 </html>
